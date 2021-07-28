@@ -49,7 +49,7 @@ public class PasswordGenerator {
     String lower_letters, String upper_Letters, String numbers_Characters, String  symbols_Characters){
         int letters_Amount = number_of_Letters(letters); // amount of letters to have
         int numbers_Amount = number_of_Numbers(Numbers); // amount of numbers characters to have
-        int symbols_Amount = number_of_Symobls(Symbols); //  amount of symbols to have
+        int symbols_Amount = number_of_Symbols(Symbols); //  amount of symbols to have
         String lowerCase_Letters = lowerCaseLetters(lower_letters); // lowercase letters
         String upperCase_Letters = upperCaseLetters(upper_Letters);// uppercase letters
         String numbersCharacters = numbers_Characters(numbers_Characters); // number characters for password
@@ -119,7 +119,7 @@ public class PasswordGenerator {
         int characters_Amount = passwordLength(Characters); // length of password
         int letters_Amount = number_of_Letters(letters); // amount of letters
         int numbers_Amount = number_of_Numbers(Numbers); // amount of numbers
-        int Symbols_Amount = number_of_Symobls(Symbols); // amount of symbols
+        int Symbols_Amount = number_of_Symbols(Symbols); // amount of symbols
         if (Symbols_Amount >= 0) { // goes after symbols so the error code won't go between 
             if (letters_Amount == 0 && numbers_Amount == 0 && Symbols_Amount == 0) { // if you type 0 for letter numbers and symbols
                 System.out.println("You have zero Letters, zero numbers and zero Symbols for your Password");
@@ -177,7 +177,7 @@ public class PasswordGenerator {
         return Numbers;
     }
 
-    public static int number_of_Symobls(int Symbols) { // Symbols amount
+    public static int number_of_Symbols(int Symbols) { // Symbols amount
         return Symbols;
     }
 
@@ -240,17 +240,17 @@ public class PasswordGenerator {
             int letters_Amount = Password.nextInt();
             System.out.print("How many numbers do want in your password? "); // Amount of numbers
             int numbers_Amount = Password.nextInt();
-            System.out.print("How many symobls do want in your password? "); // Amount of Symobls
+            System.out.print("How many symbols do want in your password? "); // Amount of Symbols
             int symbols_Amount = Password.nextInt();
             if(letters_Amount + numbers_Amount + symbols_Amount == length){
                 thereIsZeroErrorsInCustomPassword = true;
                 System.out.println("Here is Your Password");
-            System.out.println(generateRandomPassword(number_of_Letters(letters_Amount), number_of_Numbers(numbers_Amount), number_of_Symobls(symbols_Amount), 
+            System.out.println(generateRandomPassword(number_of_Letters(letters_Amount), number_of_Numbers(numbers_Amount), number_of_Symbols(symbols_Amount), 
                 lowerCaseLetters(lowerCase_Letters), upperCaseLetters(upperCase_Letters), numbers_Characters(numbers), symbols_Characters(Symbols)));
             }
             else{
                 ErrorCodes(passwordLength(length), number_of_Letters(letters_Amount),
-                number_of_Numbers(numbers_Amount), number_of_Symobls(symbols_Amount));
+                number_of_Numbers(numbers_Amount), number_of_Symbols(symbols_Amount));
             }
         }
     }
