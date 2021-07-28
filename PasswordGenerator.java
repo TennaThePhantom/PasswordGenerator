@@ -1,4 +1,3 @@
-package main_projects;
 // Password generator
 // generators the password randomly
 // you can choose the length of the password
